@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巨軟系統</title>
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/822719682560786452/1117015048871739443/IMG_0810.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        dialog {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .error-message {
+    font-size: 24px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .warning-message {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+  }
+
+  .purchase-message {
+    font-size: 16px;
+    color: blue;
+    text-align: center;
+    margin-top: 10px;
+  }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <button type="submit">按我購買巨軟系統！</button>
+    </form>
+    
+
+    <dialog id="myDialog">
+        <p>          
+            <p class="error-message">!!錯誤!!</p>
+            <p class="warning-message">你不是使用巨軟系統，WIN11 會對你的電腦造成危害</p>
+            <p class="purchase-message">請立刻購買我們的巨軟系統</p>
+            
+        </p>
+        <button onclick="hideDialog()">Close</button>
+    </dialog>
+
+    <script>
+        var dialog = document.getElementById("myDialog");
+
+        function showDialog() {
+            dialog.showModal();
+        }
+
+        function hideDialog() {
+            dialog.close();
+        }
+
+        window.onload = function() {
+            showDialog();
+        }
+    </script>
+</body>
+</html>

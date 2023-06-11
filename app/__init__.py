@@ -8,7 +8,7 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    # 執行你想要做的事情
+   
     return redirect('https://youtu.be/UIp6_0kct_U')
 
 # You must keep the routes at the end.
